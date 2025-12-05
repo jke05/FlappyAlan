@@ -1,7 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class JungleWorld extends World
-{
+public class JungleWorld extends World{
+    private int score = 0;
+    
     private long lastFrameTimeMS;
     private double timeStepDuration;
 
@@ -24,6 +25,10 @@ public class JungleWorld extends World
     public void act(){
         timeStepDuration = (System.currentTimeMillis() - lastFrameTimeMS) / 1000.0;
         lastFrameTimeMS = System.currentTimeMillis();
+    }
+    
+    public void increaseScore(int amount){
+        score += amount;
     }
     
     public double getTimeStepDuration(){
