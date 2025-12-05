@@ -1,11 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class JungleWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class JungleWorld extends World
 {
     private long lastFrameTimeMS;
@@ -13,13 +7,14 @@ public class JungleWorld extends World
 
     public JungleWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(866, 600, 1); 
-        addObject(new Alan(), 100, 300);
-        
+        addObject(new Alan(), 203, 252);
+        addObject(new Trees(), 400, 300);
+        addObject(new Trees(), 800, 250);        
+
         lastFrameTimeMS = System.currentTimeMillis();
         timeStepDuration = 1.0 / 60;
-
+        
     }
     
     public void started(){
