@@ -16,6 +16,7 @@ public class GameOverScreen extends World
     public GameOverScreen()
     {    
         super(866, 600, 1);
+        playDeath();
         addObject(new AlanOver(), 433, 365);
         addObject(new GameOverTitle(), 433, 100);
         addObject(new PlayAgain(), 433, 430);
@@ -24,5 +25,9 @@ public class GameOverScreen extends World
         
         
         
+    }
+    
+    public void playDeath(){
+        Greenfoot.playSound("death.mp3");
     }
 }

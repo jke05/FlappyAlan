@@ -26,6 +26,7 @@ public class Alan extends Actor
         if (Greenfoot.isKeyDown("space") || Greenfoot.mouseClicked(null)) {
             if (!spacePressed) {
                setVelocity(new Vector2D(0, -400));
+               Greenfoot.playSound("flap2.wav");
                spacePressed = true;
            }
         } else {
