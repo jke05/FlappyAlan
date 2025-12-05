@@ -12,7 +12,8 @@ public class Alan extends Actor
     private Vector2D velocity;
     private Vector2D acceleration;
     
-    private static final double GRAVITY = 9.8 * 200;
+    private static final double GRAVITY = 9.8 * 150;
+    public static boolean dead;
     
     private boolean spacePressed = false;
     
@@ -28,9 +29,9 @@ public class Alan extends Actor
             if (!spacePressed) {
             setVelocity(new Vector2D(0, -600));
             spacePressed = true;
-        }
+           }
         } else {
-        spacePressed = false;
+            spacePressed = false;
          }
     }
     
@@ -53,5 +54,9 @@ public class Alan extends Actor
         position.add(positionVariation);
         
         setLocation((int) position.getX(), (int) position.getY());
+    }
+    
+    public static boolean isAlive(){
+        return !dead;
     }
 }

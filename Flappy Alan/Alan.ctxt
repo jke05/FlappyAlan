@@ -9,4 +9,6 @@ comment3.params=newValue
 comment3.target=void\ setVelocity(Vector2D)
 comment4.params=
 comment4.target=void\ updatePhysics()
-numComments=5
+comment5.params=
+comment5.target=boolean\ isAlive()
+numComments=6

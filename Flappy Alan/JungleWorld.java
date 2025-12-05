@@ -10,8 +10,8 @@ public class JungleWorld extends World{
     {    
         super(866, 600, 1); 
         addObject(new Alan(), 203, 252);
-        addObject(new Trees(), 400, 300);
-        addObject(new Trees(), 800, 250);        
+        addObject(new Tree(), 400, 300);
+        addObject(new Tree(), 800, 250);        
 
         lastFrameTimeMS = System.currentTimeMillis();
         timeStepDuration = 1.0 / 60;
