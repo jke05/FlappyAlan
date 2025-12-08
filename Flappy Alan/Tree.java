@@ -7,6 +7,9 @@ public class Tree extends Actor{
     private static int nextBanana = Greenfoot.getRandomNumber(3) + 2;//number between 2 and 4
     private boolean scored = false;
     public void act(){
+        JungleWorld world = (JungleWorld)getWorld();
+        if (world != null && !world.isStarted()) return;
+        
         World w = getWorld();
         Alan alan = (Alan) getWorld().getObjects(Alan.class).get(0);
         
@@ -34,7 +37,7 @@ public class Tree extends Actor{
             
             //Spawn Banana in the same spot
             if(treeCount >= nextBanana){
-                JungleWorld world = (JungleWorld)getWorld();
+                JungleWorld worldRef = (JungleWorld) getWorld();
                 Banana banana = new Banana();
                 world.addObject(banana, treeX, treeY);
                 treeCount = 0;

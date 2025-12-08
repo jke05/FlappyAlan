@@ -19,6 +19,11 @@ public class Alan extends Actor
     }
     
     public void act() {
+        JungleWorld world = (JungleWorld)getWorld();
+        if (world != null && !world.isStarted()){
+             return;
+        }
+
         World w = getWorld();
         backgroundMusic.playLoop();
         setLocation(getX(), (int) (getY() + velocity.getY()));
@@ -26,7 +31,6 @@ public class Alan extends Actor
         if (Greenfoot.isKeyDown("space") || Greenfoot.mouseClicked(null)) {
             if (!spacePressed) {
                setVelocity(new Vector2D(0, -400));
-               Greenfoot.playSound("flap2.wav");
                spacePressed = true;
            }
         } else {
@@ -106,4 +110,5 @@ public class Alan extends Actor
         }
         return false;
     }
+
 }
